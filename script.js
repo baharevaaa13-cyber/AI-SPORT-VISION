@@ -1,1 +1,38 @@
-const items=document.querySelectorAll('.section,.statement,.partner,.founder');const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:.12});items.forEach(el=>{el.classList.add('reveal');observer.observe(el)});const style=document.createElement('style');style.textContent='.reveal{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s ease}.visible{opacity:1!important;transform:none!important}';document.head.appendChild(style);
+const languageButtons = document.querySelectorAll('[data-lang]');
+const translatedElements = document.querySelectorAll('[data-ru][data-en]');
+
+function setLanguage(lang) {
+  translatedElements.forEach(el => {
+    el.textContent = el.dataset[lang];
+  });
+
+  languageButtons.forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.lang === lang);
+  });
+
+  document.documentElement.lang = lang;
+  localStorage.setItem('asv-language', lang);
+}
+
+languageButtons.forEach(button => {
+  button.addEventListener('click', () => setLanguage(button.dataset.lang));
+});
+
+setLanguage(localStorage.getItem('asv-language') || 'ru');
+
+const revealElements = document.querySelectorAll(
+  '.manifesto, .split-section, .solution, .status-section, .scale, .partnership, .founder'
+);
+
+revealElements.forEach(el => el.classList.add('reveal'));
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.12 });
+
+revealElements.forEach(el => observer.observe(el));
