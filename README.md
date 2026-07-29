@@ -1,7 +1,11 @@
 # AI SPORT VISION
 
-Bilingual RU/EN public project page for GitHub Pages.
+Interactive bilingual RU/EN web presentation based on the official AI SPORT VISION investor deck.
 
-The visual language is aligned with the AI SPORT VISION investor presentation.
+## Current stage
+Prototype development.
 
-Current stage: prototype development.
+## Website
+Built for GitHub Pages.
+
+© 2026 AI SPORT VISION
