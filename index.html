@@ -1,320 +1,137 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="AI SPORT VISION — система интеллектуального анализа техники спортсменов.">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="AI SPORT VISION — интеллектуальная платформа анализа движения в спорте.">
   <title>AI SPORT VISION</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="noise"></div>
-  <div class="cursor-line"></div>
+<header>
+  <a class="brand" href="#top"><span>AI</span> SPORT <b>VISION</b></a>
+  <nav>
+    <a href="#why" data-ru="Почему" data-en="Why">Почему</a>
+    <a href="#solution" data-ru="Решение" data-en="Solution">Решение</a>
+    <a href="#progress" data-ru="Разработка" data-en="Development">Разработка</a>
+    <a href="#partner" data-ru="Партнёрство" data-en="Partnership">Партнёрство</a>
+  </nav>
+  <div class="lang">
+    <button data-lang="ru" class="active">RU</button><span>/</span><button data-lang="en">EN</button>
+  </div>
+</header>
 
-  <header>
-    <a class="logo" href="#top">
-      <span>AI</span> SPORT VISION
-    </a>
-
-    <nav>
-      <a href="#problem" data-ru="Проблема" data-en="Problem">Проблема</a>
-      <a href="#solution" data-ru="Решение" data-en="Solution">Решение</a>
-      <a href="#status" data-ru="Разработка" data-en="Development">Разработка</a>
-      <a href="#partnership" data-ru="Партнёрство" data-en="Partnership">Партнёрство</a>
-    </nav>
-
-    <div class="language">
-      <button class="active" data-lang="ru">RU</button>
-      <span>/</span>
-      <button data-lang="en">EN</button>
-    </div>
-  </header>
-
-  <main id="top">
-    <section class="hero">
-      <div class="hero-content">
-        <p class="section-number">01 / AI SPORT VISION</p>
-
-        <h1>
-          <span data-ru="ОПЫТ ТРЕНЕРА." data-en="COACH EXPERIENCE.">ОПЫТ ТРЕНЕРА.</span>
-          <span class="outline" data-ru="ВОЗМОЖНОСТИ ИИ." data-en="THE POWER OF AI.">ВОЗМОЖНОСТИ ИИ.</span>
-        </h1>
-
-        <p class="hero-subtitle"
-           data-ru="Интеллектуальная система анализа техники спортсменов на основе компьютерного зрения и искусственного интеллекта."
-           data-en="An intelligent athlete technique analysis system powered by computer vision and artificial intelligence.">
-          Интеллектуальная система анализа техники спортсменов на основе компьютерного зрения и искусственного интеллекта.
-        </p>
-
-        <div class="hero-footer">
-          <div class="status">
-            <i></i>
-            <span data-ru="ПРОЕКТ В СТАДИИ РАЗРАБОТКИ" data-en="PROJECT IN ACTIVE DEVELOPMENT">
-              ПРОЕКТ В СТАДИИ РАЗРАБОТКИ
-            </span>
-          </div>
-          <a href="#solution" class="arrow-link">
-            <span data-ru="Смотреть проект" data-en="Explore project">Смотреть проект</span>
-            <b>↓</b>
-          </a>
-        </div>
-      </div>
-
-      <div class="hero-visual">
-        <div class="visual-frame">
-          <div class="water-lines"></div>
-          <div class="swimmer">
-            <span class="head"></span>
-            <span class="torso"></span>
-            <span class="arm arm-1"></span>
-            <span class="arm arm-2"></span>
-            <span class="leg leg-1"></span>
-            <span class="leg leg-2"></span>
-            <i class="joint j1"></i><i class="joint j2"></i><i class="joint j3"></i>
-            <i class="joint j4"></i><i class="joint j5"></i><i class="joint j6"></i>
-          </div>
-          <div class="analysis-label label-1">
-            <small data-ru="ЛИНИЯ ТЕЛА" data-en="BODY LINE">ЛИНИЯ ТЕЛА</small>
-            <strong>ANALYSIS</strong>
-          </div>
-          <div class="analysis-label label-2 error">
-            <small data-ru="ОТКЛОНЕНИЕ" data-en="DEVIATION">ОТКЛОНЕНИЕ</small>
-            <strong>+ 6°</strong>
-          </div>
-          <div class="frame-corner corner-a"></div>
-          <div class="frame-corner corner-b"></div>
-          <div class="scan"></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="manifesto">
-      <p class="section-number">02 / WHY IT MATTERS</p>
-      <h2>
-        <span data-ru="КАЖДОЕ ДВИЖЕНИЕ" data-en="EVERY MOVEMENT">КАЖДОЕ ДВИЖЕНИЕ</span>
-        <span class="red" data-ru="ИМЕЕТ ЗНАЧЕНИЕ." data-en="MATTERS.">ИМЕЕТ ЗНАЧЕНИЕ.</span>
-      </h2>
-      <p class="large-copy"
-         data-ru="Даже опытный тренер не может одновременно видеть каждого спортсмена, каждую фазу движения и каждую техническую ошибку."
-         data-en="Even an experienced coach cannot simultaneously see every athlete, every phase of movement and every technical error.">
-        Даже опытный тренер не может одновременно видеть каждого спортсмена, каждую фазу движения и каждую техническую ошибку.
+<main id="top">
+  <section class="hero image-section" style="--bg:url('assets/cover-01.jpg')">
+    <div class="shade"></div>
+    <div class="hero-copy">
+      <div class="status"><i></i><span data-ru="ПРОЕКТ В СТАДИИ РАЗРАБОТКИ" data-en="PROJECT IN ACTIVE DEVELOPMENT">ПРОЕКТ В СТАДИИ РАЗРАБОТКИ</span></div>
+      <h1><span>AI</span> SPORT <b>VISION</b></h1>
+      <p data-ru="Расширяя возможности тренера, мы помогаем раскрывать потенциал спортсмена."
+         data-en="Expanding the coach's capabilities. Unlocking the athlete's potential.">
+         Расширяя возможности тренера, мы помогаем раскрывать потенциал спортсмена.
       </p>
-    </section>
+      <a href="#why"><span data-ru="Открыть проект" data-en="Explore the project">Открыть проект</span><b>↓</b></a>
+    </div>
+  </section>
 
-    <section id="problem" class="split-section">
-      <div class="split-title">
-        <p class="section-number">03 / PROBLEM</p>
-        <h2 data-ru="ВОЗМОЖНОСТИ ЧЕЛОВЕКА ОГРАНИЧЕНЫ." data-en="HUMAN ATTENTION HAS LIMITS.">
-          ВОЗМОЖНОСТИ ЧЕЛОВЕКА ОГРАНИЧЕНЫ.
-        </h2>
-      </div>
+  <section id="why" class="scene">
+    <div class="scene-image" style="background-image:url('assets/problem-02.jpg')"></div>
+    <div class="scene-copy">
+      <span class="num">01 / WHY IT MATTERS</span>
+      <h2 data-ru="КАЖДОЕ ДВИЖЕНИЕ ИМЕЕТ ЗНАЧЕНИЕ."
+          data-en="EVERY MOVEMENT MATTERS.">КАЖДОЕ ДВИЖЕНИЕ ИМЕЕТ ЗНАЧЕНИЕ.</h2>
+      <p data-ru="Тренер наблюдает за группой, но не может одновременно видеть каждого спортсмена, каждое движение и всё, что происходит под водой."
+         data-en="A coach observes the group, but cannot simultaneously see every athlete, every movement and everything happening beneath the surface.">
+         Тренер наблюдает за группой, но не может одновременно видеть каждого спортсмена, каждое движение и всё, что происходит под водой.
+      </p>
+      <p class="accent" data-ru="Чем выше уровень спортсмена — тем выше цена незамеченной ошибки."
+         data-en="The higher the athlete's level, the greater the cost of an unnoticed error.">
+         Чем выше уровень спортсмена — тем выше цена незамеченной ошибки.
+      </p>
+    </div>
+  </section>
 
-      <div class="problem-list">
-        <article>
-          <span>01</span>
-          <p data-ru="Один тренер работает сразу с несколькими спортсменами."
-             data-en="One coach works with several athletes at the same time.">
-            Один тренер работает сразу с несколькими спортсменами.
-          </p>
-        </article>
-        <article>
-          <span>02</span>
-          <p data-ru="Часть движения проходит под водой или слишком быстро для точной оценки."
-             data-en="Part of the movement happens underwater or too quickly for precise assessment.">
-            Часть движения проходит под водой или слишком быстро для точной оценки.
-          </p>
-        </article>
-        <article>
-          <span>03</span>
-          <p data-ru="Ошибки есть на любом уровне. Чем выше уровень спортсмена — тем выше цена ошибки."
-             data-en="Technical errors exist at every level. The higher the level, the greater the cost of an error.">
-            Ошибки есть на любом уровне. Чем выше уровень спортсмена — тем выше цена ошибки.
-          </p>
-        </article>
-      </div>
-    </section>
-
-    <section id="solution" class="solution">
-      <div class="solution-head">
-        <p class="section-number">04 / SOLUTION</p>
-        <h2 data-ru="СИСТЕМА НЕ ЗАМЕНЯЕТ ТРЕНЕРА." data-en="THE SYSTEM DOES NOT REPLACE THE COACH.">
-          СИСТЕМА НЕ ЗАМЕНЯЕТ ТРЕНЕРА.
-        </h2>
-        <p data-ru="Она помогает видеть больше, анализировать глубже и принимать более точные решения."
-           data-en="It helps the coach see more, analyze deeper and make more precise decisions.">
-          Она помогает видеть больше, анализировать глубже и принимать более точные решения.
-        </p>
-      </div>
-
-      <div class="process">
-        <article>
-          <span>01</span>
-          <h3 data-ru="ВИДЕО" data-en="VIDEO">ВИДЕО</h3>
-          <p data-ru="Камеры над водой и под водой." data-en="Above-water and underwater cameras.">
-            Камеры над водой и под водой.
-          </p>
-        </article>
+  <section id="solution" class="scene reverse">
+    <div class="scene-image" style="background-image:url('assets/solution-05.jpg')"></div>
+    <div class="scene-copy">
+      <span class="num">02 / OUR SOLUTION</span>
+      <h2 data-ru="ДЕЛАЕМ НЕВИДИМОЕ ПОНЯТНЫМ."
+          data-en="WE MAKE THE INVISIBLE UNDERSTANDABLE.">
+          ДЕЛАЕМ НЕВИДИМОЕ ПОНЯТНЫМ.
+      </h2>
+      <p data-ru="Видео превращается в точки движения, биомеханические показатели, анализ техники и понятные рекомендации для тренера."
+         data-en="Video becomes motion landmarks, biomechanical metrics, technique analysis and clear recommendations for the coach.">
+         Видео превращается в точки движения, биомеханические показатели, анализ техники и понятные рекомендации для тренера.
+      </p>
+      <div class="steps">
+        <span data-ru="ВИДЕО" data-en="VIDEO">ВИДЕО</span>
         <i>→</i>
-        <article>
-          <span>02</span>
-          <h3 data-ru="КОМПЬЮТЕРНОЕ ЗРЕНИЕ" data-en="COMPUTER VISION">КОМПЬЮТЕРНОЕ ЗРЕНИЕ</h3>
-          <p data-ru="Выбор спортсмена, отслеживание и точки тела."
-             data-en="Athlete selection, tracking and body landmarks.">
-            Выбор спортсмена, отслеживание и точки тела.
-          </p>
-        </article>
+        <span data-ru="ТОЧКИ" data-en="KEY POINTS">ТОЧКИ</span>
         <i>→</i>
-        <article>
-          <span>03</span>
-          <h3 data-ru="АНАЛИЗ" data-en="ANALYSIS">АНАЛИЗ</h3>
-          <p data-ru="Фазы движения, углы, линии и технические отклонения."
-             data-en="Movement phases, angles, body lines and technical deviations.">
-            Фазы движения, углы, линии и технические отклонения.
-          </p>
-        </article>
+        <span data-ru="АНАЛИЗ" data-en="ANALYSIS">АНАЛИЗ</span>
         <i>→</i>
-        <article>
-          <span>04</span>
-          <h3 data-ru="РЕШЕНИЕ ТРЕНЕРА" data-en="COACH DECISION">РЕШЕНИЕ ТРЕНЕРА</h3>
-          <p data-ru="Подсказки, отчёты и история прогресса спортсмена."
-             data-en="Prompts, reports and athlete progress history.">
-            Подсказки, отчёты и история прогресса спортсмена.
-          </p>
-        </article>
+        <span data-ru="РЕКОМЕНДАЦИИ" data-en="RECOMMENDATIONS">РЕКОМЕНДАЦИИ</span>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="status" class="status-section">
-      <div class="status-intro">
-        <p class="section-number">05 / DEVELOPMENT STATUS</p>
-        <h2 data-ru="ЭТО НЕ ПРОСТО ИДЕЯ." data-en="THIS IS MORE THAN AN IDEA.">
-          ЭТО НЕ ПРОСТО ИДЕЯ.
-        </h2>
-        <p data-ru="Разработка уже идёт. Первый приоритет — автономная настольная система для работы тренера с видеопотоками."
-           data-en="Development is already underway. The first priority is a standalone desktop system for coaches working with video streams.">
-          Разработка уже идёт. Первый приоритет — автономная настольная система для работы тренера с видеопотоками.
-        </p>
-      </div>
+  <section id="progress" class="progress">
+    <div class="progress-head">
+      <span class="num">03 / DEVELOPMENT</span>
+      <h2 data-ru="ЭТО УЖЕ НЕ ПРОСТО ИДЕЯ."
+          data-en="THIS IS ALREADY MORE THAN AN IDEA.">ЭТО УЖЕ НЕ ПРОСТО ИДЕЯ.</h2>
+      <p data-ru="Разработка ведётся самостоятельно, без инвестиций. Первый приоритет — настольная система для работы тренера с видеопотоками."
+         data-en="Development is being carried out independently, without investment. The first priority is a desktop system for coaches working with video streams.">
+         Разработка ведётся самостоятельно, без инвестиций. Первый приоритет — настольная система для работы тренера с видеопотоками.
+      </p>
+    </div>
+    <div class="cards">
+      <article class="done"><small data-ru="ГОТОВО" data-en="COMPLETED">ГОТОВО</small><h3 data-ru="Концепция и архитектура" data-en="Concept and architecture">Концепция и архитектура</h3></article>
+      <article class="done"><small data-ru="ГОТОВО" data-en="COMPLETED">ГОТОВО</small><h3 data-ru="Настольный интерфейс" data-en="Desktop interface">Настольный интерфейс</h3></article>
+      <article class="active"><small data-ru="В РАБОТЕ" data-en="IN DEVELOPMENT">В РАБОТЕ</small><h3 data-ru="Видео и отслеживание пловца" data-en="Video and swimmer tracking">Видео и отслеживание пловца</h3></article>
+      <article><small data-ru="ДАЛЕЕ" data-en="NEXT">ДАЛЕЕ</small><h3 data-ru="Анализ техники и пилот" data-en="Technique analysis and pilot">Анализ техники и пилот</h3></article>
+    </div>
+  </section>
 
-      <div class="status-grid">
-        <article class="complete">
-          <span data-ru="ВЫПОЛНЕНО" data-en="COMPLETED">ВЫПОЛНЕНО</span>
-          <h3 data-ru="Концепция продукта" data-en="Product concept">Концепция продукта</h3>
-          <p data-ru="Определены проблема, ключевые сценарии и архитектура продукта."
-             data-en="The problem, core scenarios and product architecture have been defined.">
-            Определены проблема, ключевые сценарии и архитектура продукта.
-          </p>
-        </article>
+  <section class="roadmap image-section" style="--bg:url('assets/roadmap-15.jpg')">
+    <div class="shade"></div>
+    <div class="roadmap-copy">
+      <span class="num">04 / ROADMAP</span>
+      <h2 data-ru="СЕГОДНЯ. ЧЕРЕЗ ГОД. ВМЕСТЕ."
+          data-en="TODAY. IN ONE YEAR. TOGETHER.">СЕГОДНЯ. ЧЕРЕЗ ГОД. ВМЕСТЕ.</h2>
+      <p data-ru="Инвестиции не меняют цель. Они меняют скорость её достижения."
+         data-en="Investment does not change the goal. It changes the speed of achieving it.">
+         Инвестиции не меняют цель. Они меняют скорость её достижения.
+      </p>
+    </div>
+  </section>
 
-        <article class="complete">
-          <span data-ru="ВЫПОЛНЕНО" data-en="COMPLETED">ВЫПОЛНЕНО</span>
-          <h3 data-ru="Настольный интерфейс" data-en="Desktop interface">Настольный интерфейс</h3>
-          <p data-ru="Создана модульная структура приложения и рабочее окно тренера."
-             data-en="A modular application structure and coach workspace have been created.">
-            Создана модульная структура приложения и рабочее окно тренера.
-          </p>
-        </article>
-
-        <article class="active">
-          <span data-ru="В РАЗРАБОТКЕ" data-en="IN DEVELOPMENT">В РАЗРАБОТКЕ</span>
-          <h3 data-ru="Работа с видео" data-en="Video workflow">Работа с видео</h3>
-          <p data-ru="Загрузка, воспроизведение и подготовка видеопотока для анализа."
-             data-en="Video loading, playback and preparation for analysis.">
-            Загрузка, воспроизведение и подготовка видеопотока для анализа.
-          </p>
-        </article>
-
-        <article class="active">
-          <span data-ru="В РАЗРАБОТКЕ" data-en="IN DEVELOPMENT">В РАЗРАБОТКЕ</span>
-          <h3 data-ru="Отслеживание спортсмена" data-en="Athlete tracking">Отслеживание спортсмена</h3>
-          <p data-ru="Выбор нужного пловца и удержание его в кадре."
-             data-en="Selecting the target swimmer and maintaining tracking across frames.">
-            Выбор нужного пловца и удержание его в кадре.
-          </p>
-        </article>
-
-        <article class="next">
-          <span data-ru="СЛЕДУЮЩИЙ ЭТАП" data-en="NEXT STAGE">СЛЕДУЮЩИЙ ЭТАП</span>
-          <h3 data-ru="Анализ техники" data-en="Technique analysis">Анализ техники</h3>
-          <p data-ru="Углы, фазы, линии тела, технические ошибки и рекомендации."
-             data-en="Angles, phases, body alignment, technical errors and recommendations.">
-            Углы, фазы, линии тела, технические ошибки и рекомендации.
-          </p>
-        </article>
-
-        <article class="next">
-          <span data-ru="СЛЕДУЮЩИЙ ЭТАП" data-en="NEXT STAGE">СЛЕДУЮЩИЙ ЭТАП</span>
-          <h3 data-ru="Пилотное внедрение" data-en="Pilot implementation">Пилотное внедрение</h3>
-          <p data-ru="Тестирование в реальном тренировочном процессе."
-             data-en="Testing in a real training environment.">
-            Тестирование в реальном тренировочном процессе.
-          </p>
-        </article>
-      </div>
-    </section>
-
-    <section class="scale">
-      <p class="section-number">06 / SCALE</p>
-      <div class="scale-copy">
-        <h2 data-ru="НАЧИНАЕМ С ПЛАВАНИЯ." data-en="STARTING WITH SWIMMING.">
-          НАЧИНАЕМ С ПЛАВАНИЯ.
-        </h2>
-        <h2 class="outline" data-ru="СОЗДАЁМ ДЛЯ СПОРТА." data-en="BUILDING FOR SPORT.">
-          СОЗДАЁМ ДЛЯ СПОРТА.
-        </h2>
-      </div>
-      <div class="scale-tags">
-        <span data-ru="Плавание" data-en="Swimming">Плавание</span>
-        <span data-ru="Командные виды спорта" data-en="Team sports">Командные виды спорта</span>
-        <span data-ru="Фитнес" data-en="Fitness">Фитнес</span>
-        <span data-ru="Реабилитация" data-en="Rehabilitation">Реабилитация</span>
-        <span data-ru="Медицина" data-en="Medicine">Медицина</span>
-      </div>
-    </section>
-
-    <section id="partnership" class="partnership">
-      <p class="section-number">07 / PARTNERSHIP</p>
+  <section id="partner" class="final image-section" style="--bg:url('assets/final-16.jpg')">
+    <div class="shade"></div>
+    <div class="final-copy">
+      <span class="num">05 / STRATEGIC PARTNERSHIP</span>
       <h2 data-ru="ГОТОВЫ СТРОИТЬ AI SPORT VISION ВМЕСТЕ С HUB71."
           data-en="READY TO BUILD AI SPORT VISION TOGETHER WITH HUB71.">
-        ГОТОВЫ СТРОИТЬ AI SPORT VISION ВМЕСТЕ С HUB71.
+          ГОТОВЫ СТРОИТЬ AI SPORT VISION ВМЕСТЕ С HUB71.
       </h2>
       <p data-ru="При наличии стратегического партнёра мы готовы перенести разработку продукта, сформировать локальную команду и лично участвовать в развитии проекта в Абу-Даби."
          data-en="With a strategic partner, we are prepared to relocate product development, build a local team and personally participate in developing the project in Abu Dhabi.">
-        При наличии стратегического партнёра мы готовы перенести разработку продукта, сформировать локальную команду и лично участвовать в развитии проекта в Абу-Даби.
+         При наличии стратегического партнёра мы готовы перенести разработку продукта, сформировать локальную команду и лично участвовать в развитии проекта в Абу-Даби.
       </p>
-      <a href="mailto:baharevaaa13@gmail.com">
-        <span data-ru="СВЯЗАТЬСЯ С ОСНОВАТЕЛЕМ" data-en="CONTACT THE FOUNDER">СВЯЗАТЬСЯ С ОСНОВАТЕЛЕМ</span>
-        <b>↗</b>
-      </a>
-    </section>
+      <a href="mailto:baharevaaa13@gmail.com"><span data-ru="СВЯЗАТЬСЯ С ОСНОВАТЕЛЕМ" data-en="CONTACT THE FOUNDER">СВЯЗАТЬСЯ С ОСНОВАТЕЛЕМ</span><b>↗</b></a>
+    </div>
+  </section>
+</main>
 
-    <section class="founder">
-      <div>
-        <p class="section-number">08 / FOUNDER</p>
-        <h2>АЛЕКСАНДР</h2>
-        <p data-ru="Мастер спорта · Экономист · Инженер · Руководитель проектов"
-           data-en="Master of Sport · Economist · Engineer · Project Leader">
-          Мастер спорта · Экономист · Инженер · Руководитель проектов
-        </p>
-      </div>
-      <blockquote>
-        <span data-ru="НАЧАЛОСЬ С СЕМЬИ." data-en="STARTED WITH FAMILY.">НАЧАЛОСЬ С СЕМЬИ.</span>
-        <strong data-ru="СОЗДАЁТСЯ ДЛЯ МИЛЛИОНОВ." data-en="BUILT FOR MILLIONS.">
-          СОЗДАЁТСЯ ДЛЯ МИЛЛИОНОВ.
-        </strong>
-      </blockquote>
-    </section>
-  </main>
-
-  <footer>
-    <div class="logo"><span>AI</span> SPORT VISION</div>
-    <p data-ru="Опыт тренера. Возможности ИИ. Лучшие решения — вместе."
-       data-en="Coach experience. The power of AI. Better decisions — together.">
-      Опыт тренера. Возможности ИИ. Лучшие решения — вместе.
-    </p>
-    <small>© 2026 AI SPORT VISION</small>
-  </footer>
-
-  <script src="script.js"></script>
+<footer>
+  <div class="brand"><span>AI</span> SPORT <b>VISION</b></div>
+  <p data-ru="Опыт тренера. Возможности ИИ. Лучшие решения — вместе."
+     data-en="Coach experience. The power of AI. Better decisions — together.">
+     Опыт тренера. Возможности ИИ. Лучшие решения — вместе.
+  </p>
+  <small>© 2026</small>
+</footer>
+<script src="script.js"></script>
 </body>
 </html>
